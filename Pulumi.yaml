@@ -1,0 +1,3 @@
+name: aws-infrastructure
+runtime: nodejs
+description: A Pulumi program for provision and manage AWS infrastructure
