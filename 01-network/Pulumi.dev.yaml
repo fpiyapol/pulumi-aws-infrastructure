@@ -3,3 +3,17 @@ config:
   aws-infrastructure:network:
     name: 'dev'
     cidrBlock: '10.0.0.0/16'
+    availabilityZones:
+      - 'ap-southeast-1a'
+      - 'ap-southeast-1b'
+    publicSubnet:
+      cidrBlocks:
+        - '10.0.1.0/24'
+        - '10.0.2.0/24'
+      tags:
+        - key: 'kubernetes.io/role/elb'
+          value: '1'
+    privateSubnet:
+      cidrBlocks:
+        - '10.0.101.0/24'
+        - '10.0.102.0/24'
